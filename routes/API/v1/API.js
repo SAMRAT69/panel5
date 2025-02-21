@@ -606,7 +606,7 @@ async function checkNodeStatus(node) {
   try {
     const RequestData = {
       method: 'get',
-      url: 'http://' + node.address + ':' + node.port + '/',
+      url: 'https://' + node.address + ':' + node.port + '/',
       auth: {
         username: 'Skyport',
         password: node.apiKey
@@ -651,7 +651,7 @@ async function checkContainerState(volumeId, nodeAddress, nodePort, apiKey, user
     try {
       const response = await axios({
         method: 'get',
-        url: `http://${nodeAddress}:${nodePort}/state/${volumeId}`,
+        url: `https://${nodeAddress}:${nodePort}/state/${volumeId}`,
         auth: {
           username: 'Skyport',
           password: apiKey,
@@ -712,7 +712,7 @@ async function prepareRequestData(image, memory, cpu, ports, name, node, Id, var
 
   const requestData = {
     method: 'post',
-    url: `http://${node.address}:${node.port}/instances/create`,
+    url: `https://${node.address}:${node.port}/instances/create`,
     auth: {
       username: 'Skyport',
       password: node.apiKey,
