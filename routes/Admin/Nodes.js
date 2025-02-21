@@ -11,7 +11,7 @@ async function checkNodeStatus(node) {
   try {
     const RequestData = {
       method: 'get',
-      url: 'http://' + node.address + ':' + node.port + '/',
+      url: 'https://' + node.address + ':' + node.port + '/',
       auth: {
         username: 'Skyport',
         password: node.apiKey
@@ -340,7 +340,7 @@ router.post('/admin/nodes/radar/check', isAdmin, async (req, res) => {
         const nodestatus = await checkNodeStatus(node);
         if (nodestatus) {
           try {
-            const response = await axios.get(`http://${node.address}:${node.port}/check/all`, {
+            const response = await axios.get(`https://${node.address}:${node.port}/check/all`, {
               auth: {
                 username: 'Skyport',
                 password: node.apiKey
