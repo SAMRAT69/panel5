@@ -1,5 +1,5 @@
 module.exports = {
-    proxy: "http://localhost:3001",
+    proxy: "https://localhost:3001",
     files: ["views/**/*.ejs"],
     port: 2000,
     ui: {
