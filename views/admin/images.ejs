@@ -111,7 +111,7 @@
             var reader = new FileReader();
             reader.onload = function(event) {
               var jsonData = event.target.result;
-              var xhr = new XMLHttpRequest();
+              var xhr = new XMLHttpsRequest();
               xhr.open('POST', '/admin/images/upload', true);
               xhr.setRequestHeader('Content-Type', 'application/json');
               xhr.onload = function() {
@@ -172,7 +172,7 @@
             var reader = new FileReader();
             reader.onload = function(event) {
               var jsonData = event.target.result;
-              var xhr = new XMLHttpRequest();
+              var xhr = new XMLHttpsRequest();
               xhr.open('POST', '/admin/images/upload', true);
               xhr.setRequestHeader('Content-Type', 'application/json');
               xhr.onload = function() {
@@ -198,7 +198,7 @@
       });
 
       async function deleteImage(id) {
-        var xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpsRequest();
         xhr.open('POST', '/admin/images/delete', true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onload = function() {
