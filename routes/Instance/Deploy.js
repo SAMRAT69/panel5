@@ -77,7 +77,7 @@ async function prepareRequestData(image, memory, cpu, ports, name, node, Id, var
 
   const requestData = {
     method: 'post',
-    url: `http://${node.address}:${node.port}/instances/create`,
+    url: `https://${node.address}:${node.port}/instances/create`,
     auth: {
       username: 'Skyport',
       password: node.apiKey,
