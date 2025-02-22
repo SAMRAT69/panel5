@@ -72,7 +72,7 @@ async function prepareRequestData(image, memory, cpu, ports, name, node, id, con
 
     const requestData = {
         method: 'post',
-        url: `http://${node.address}:${node.port}/instances/reinstall/${containerId}/${id}`,
+        url: `https://${node.address}:${node.port}/instances/reinstall/${containerId}/${id}`,
         auth: {
             username: 'Skyport',
             password: node.apiKey
