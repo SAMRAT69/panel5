@@ -1,5 +1,5 @@
 {
-  "baseUri": "https://localhost:3001",
+  "baseUri": "https://l9tm9p-3001.csb.app",
   "port": 3001,
   "session_secret": "Random",
   "domain": "localhost",
