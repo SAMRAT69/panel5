@@ -100,7 +100,7 @@ router.post("/instance/:id/db/create/:name", async (req, res) => {
     if (instance.Node && instance.Node.address && instance.Node.port) {
         const requestData = {
             method: 'post',
-            url: `http://${instance.Node.address}:${instance.Node.port}/database/create/${encodeURIComponent(name)}`,
+            url: `https://${instance.Node.address}:${instance.Node.port}/database/create/${encodeURIComponent(name)}`,
             auth: {
                 username: 'Skyport',
                 password: instance.Node.apiKey
