@@ -20,7 +20,7 @@ router.post("/instance/:id/power", async (req, res) => {
     }
 
     try {
-        const response = await fetch(`http://${instance.Node.address}:${instance.Node.port}/instances/${instance.ContainerId}/stop`, {
+        const response = await fetch(`https://${instance.Node.address}:${instance.Node.port}/instances/${instance.ContainerId}/stop`, {
             method: 'POST',
             auth: {
                 username: 'Skyport',
