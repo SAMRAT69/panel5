@@ -48,7 +48,7 @@ function prepareEditRequestData(instance, Image, Memory, Cpu) {
   const node = instance.Node;
   return {
     method: 'put',
-    url: `http://${node.address}:${node.port}/instances/edit/${instance.ContainerId}`,
+    url: `https://${node.address}:${node.port}/instances/edit/${instance.ContainerId}`,
     auth: {
       username: 'Skyport',
       password: node.apiKey
