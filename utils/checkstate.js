@@ -20,7 +20,7 @@ async function checkContainerState(volumeId, nodeAddress, nodePort, apiKey, user
       try {
         const response = await axios({
           method: 'get',
-          url: `http://${nodeAddress}:${nodePort}/state/${volumeId}`,
+          url: `https://${nodeAddress}:${nodePort}/state/${volumeId}`,
           auth: {
             username: 'Skyport',
             password: apiKey,
