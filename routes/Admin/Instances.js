@@ -13,7 +13,7 @@ async function checkNodeStatus(node) {
   try {
     const requestData = {
       method: 'get',
-      url: `http://${node.address}:${node.port}/`,
+      url: `https://${node.address}:${node.port}/`,
       auth: {
         username: 'Skyport',
         password: node.apiKey,
