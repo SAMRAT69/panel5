@@ -231,7 +231,7 @@ async function executePowerAction(instanceId, powerAction) {
     try {
         const instance = await db.get(instanceId + '_instance');
         const response = await axios.post(
-            `http://${instance.Node.address}:${instance.Node.port}/instances/${instance.ContainerId}/${powerAction}`, 
+            `https://${instance.Node.address}:${instance.Node.port}/instances/${instance.ContainerId}/${powerAction}`, 
             {},
             {
                 auth: { 
