@@ -42,7 +42,7 @@ router.get("/instance/:id/ftp", async (req, res) => {
     if (instance.Node && instance.Node.address && instance.Node.port) {
         const RequestData = {
             method: 'get',
-            url: `http://${instance.Node.address}:${instance.Node.port}/ftp/info/${instance.VolumeId}`,
+            url: `https://${instance.Node.address}:${instance.Node.port}/ftp/info/${instance.VolumeId}`,
             auth: {
                 username: 'Skyport',
                 password: instance.Node.apiKey
