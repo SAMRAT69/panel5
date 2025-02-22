@@ -37,7 +37,7 @@ router.post("/instance/:id/files/upload", upload.array('files'), async (req, res
         return res.render('instance/suspended', { req, user: req.user });
     }
 
-    const apiUrl = `http://${instance.Node.address}:${instance.Node.port}/fs/${instance.VolumeId}/files/upload?path=${encodeURIComponent(subPath)}`;
+    const apiUrl = `https://${instance.Node.address}:${instance.Node.port}/fs/${instance.VolumeId}/files/upload?path=${encodeURIComponent(subPath)}`;
     const formData = new FormData();
 
     files.forEach(file => {
