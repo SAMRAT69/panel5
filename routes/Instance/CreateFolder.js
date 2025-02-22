@@ -77,7 +77,7 @@ router.post("/instance/:id/files/folder/create/:foldername", async (req, res) =>
     }
 
     const query = req.query.path ? `?path=${req.query.path}` : '';
-    const apiUrl = `http://${instance.Node.address}:${instance.Node.port}/fs/${instance.VolumeId}/folders/create/${foldername}${query}`;
+    const apiUrl = `https://${instance.Node.address}:${instance.Node.port}/fs/${instance.VolumeId}/folders/create/${foldername}${query}`;
 
     try {
         const response = await axios.post(apiUrl, {}, {
