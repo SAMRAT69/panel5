@@ -42,7 +42,7 @@ router.get("/instance/:id/archives", async (req, res) => {
         if (instance.Node && instance.Node.address && instance.Node.port) {
             const RequestData = {
                 method: 'get',
-                url: `http://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
+                url: `https://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
                 auth: {
                     username: 'Skyport',
                     password: instance.Node.apiKey
@@ -111,7 +111,7 @@ router.post('/instance/:id/archives/create', async (req, res) => {
 
     const RequestData = {
         method: 'post',
-       // url: `http://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
+       // url: `https://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
         url: `http://Skyport:${instance.Node.apiKey}@${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives/${instance.VolumeId}/create`,
         headers: { 
             'Content-Type': 'application/json'
@@ -157,7 +157,7 @@ router.post('/instance/:id/archives/delete/:archivename', async (req, res) => {
 
     const RequestData = {
         method: 'post',
-       // url: `http://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
+       // url: `https://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
         url: `http://Skyport:${instance.Node.apiKey}@${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives/delete/${archivename}`,
         headers: { 
             'Content-Type': 'application/json'
@@ -202,7 +202,7 @@ router.post('/instance/:id/archives/rollback/:archivename', async (req, res) => 
 
     const RequestData = {
         method: 'post',
-       // url: `http://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
+       // url: `https://${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives`,
         url: `http://Skyport:${instance.Node.apiKey}@${instance.Node.address}:${instance.Node.port}/archive/${instance.ContainerId}/archives/rollback/${instance.VolumeId}/${archivename}`,
         headers: { 
             'Content-Type': 'application/json'
