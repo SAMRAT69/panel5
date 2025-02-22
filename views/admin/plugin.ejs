@@ -38,7 +38,7 @@
     document.getElementById('save-button').addEventListener('click', function() {
       var content = editor.getValue();
       var filename = 'manifest.json';
-      var xhr = new XMLHttpRequest();
+      var xhr = new XMLHttpsRequest();
       xhr.open('POST', '/admin/plugins/<%= dir %>/save', true);
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.onreadystatechange = function() {
@@ -52,7 +52,7 @@
     document.getElementById('save-close-button').addEventListener('click', function() {
       var content = editor.getValue();
       var filename = 'manifest.json';
-      var xhr = new XMLHttpRequest();
+      var xhr = new XMLHttpsRequest();
       xhr.open('POST', '/admin/plugins/<%= dir %>/save', true);
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.onreadystatechange = function() {
