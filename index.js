@@ -141,7 +141,7 @@ function getLanguages() {
 app.get('/setLanguage', async (req, res) => {
   const lang = req.query.lang;
   if (lang && getLanguages().includes(lang)) {
-      res.cookie('lang', lang, { maxAge: 90000000, httpOnly: true, sameSite: 'strict' });
+      res.cookie('lang', lang, { maxAge: 90000000, httpsOnly: true, sameSite: 'strict' });
       req.user.lang = lang;
       res.json({ success: true });
   } else {
