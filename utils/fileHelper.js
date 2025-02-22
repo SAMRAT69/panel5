@@ -4,7 +4,7 @@ const log = new (require('cat-loggr'))();
 class FileOperations {
   constructor(instance) {
     this.instance = instance;
-    this.baseUrl = `http://${instance.Node.address}:${instance.Node.port}/fs/${instance.VolumeId}`;
+    this.baseUrl = `https://${instance.Node.address}:${instance.Node.port}/fs/${instance.VolumeId}`;
     this.auth = {
       username: 'Skyport',
       password: instance.Node.apiKey
